@@ -1,0 +1,23 @@
+.content--titulo, .content--subtitulo {
+    font-family: var(--fontFamily-1);
+    text-align: center;
+}
+.content--titulo {
+    font-size: 40px;
+    font-weight: 800;
+}
+.content--subtitulo {
+    font-size: 18px;
+    font-weight: 300;
+}
+.content__box-heroes{
+    padding: 50px 0;
+}
+
+@media screen and (max-width: 768px){
+    .content--titulo{
+        font-size: 34px;
+        line-height: 34px;
+        margin-bottom: 10px;
+    }
+}

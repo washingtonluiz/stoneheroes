@@ -1,0 +1,154 @@
+.list-heroes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+.list-heroes__item{
+    cursor: pointer;
+    margin: 0 0 20px 20px;
+    overflow: hidden;
+    position: relative;
+    width: calc(20% - 16px);
+}
+.list-heroes__item:nth-child(5n+1){
+    margin-left: 0;
+}
+.list-heroes__item a{
+    display: block;
+}
+.list-heroes__item__box-data{
+    bottom: -39px;
+    left: 0;
+    position: absolute;
+    transition: bottom 0.5s ease-in-out;
+    width: 100%;
+}
+
+.list-heroes__item__box-data > div{
+    align-items: center;
+    background-color: rgba(0,0,0,.7);
+    bottom: 0;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    max-width: 350px;
+    padding: 5px 10px;
+}
+.list-heroes__item__box-data h3{
+    align-items: center;
+    background: #000;
+    color: var(--white);
+    display: flex;
+    font-size: 16px;
+    font-weight: 300;
+    justify-content: space-between;
+    padding: 10px;
+    text-align: right;
+}
+.list-heroes__item--favorite{
+    color: var(--white);
+    font-size: 25px;
+}
+.list-heroes__item--favorite .fa-heart {
+    color: red;
+}
+.list-heroes__item h2 {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+}
+.list-heroes__item__box-image{
+    height: 306px;
+    margin: 0;
+    max-width: 100%;
+}
+.list-heroes__item__image {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.list-heroes__item__image:after{
+    background: rgba(0, 0, 0, 0);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: background 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 1023px){
+    .list-heroes__item__box-data{
+        bottom: 0;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .list-heroes__item:hover .list-heroes__item__image:after {
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .list-heroes__item--favorite .fa-heart-o:hover{
+        animation: heart .5s alternate infinite ease-in;
+    }
+    .list-heroes__item:hover .list-heroes__item__box-data{
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 990px){
+    .list-heroes__item{
+        width: calc(25% - 15px);
+    }
+    .list-heroes__item:nth-child(5n+1){
+        margin-left: 20px;
+    }
+    .list-heroes__item:nth-child(4n+1){
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .list-heroes__item{
+        width: calc(33.33% - 14px);
+    }
+    .list-heroes__item:nth-child(5n+1){
+        margin-left: 20px;
+    }
+    .list-heroes__item:nth-child(4n+1){
+        margin-left: 20px;
+    }
+    .list-heroes__item:nth-child(3n+1){
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .content__box-heroes {
+        overflow: hidden;
+    }
+    .list-heroes {
+        display: -webkit-box;
+        flex-wrap: nowrap;
+        margin-left: -15px;
+        overflow: auto;
+        width: 110%;
+    }
+    .list-heroes__item{
+        width: calc(100% - 100px);
+    }
+    .list-heroes__item:nth-child(5n+1){
+        margin-left: 20px;
+    }
+    .list-heroes__item:nth-child(4n+1){
+        margin-left: 20px;
+    }
+    .list-heroes__item:nth-child(3n+1){
+        margin-left: 20px;
+    }
+    .list-heroes__item:first-child{
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,141 @@
+/* Grid */
+.wrap {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 100%;
+  width: 1280px;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--fontFamily-1);
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
+}
+input {
+  -webkit-appearance: none;
+  border: none;
+}
+input::placeholder { 
+  color: #999; 
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid var(--white);
+  -webkit-text-fill-color: var(--black);
+  -webkit-box-shadow: 0 0 0px 1000px var(--black) inset;
+  transition: background-color 1.5s ease-in-out 0s;
+}
+
+/* Loader */
+.box-loader{
+  overflow: hidden;
+}
+.bar {
+  position: relative;
+  height: 2px;
+  max-width: 500px;
+  margin: 0 auto;
+  background: #347fc3;
+  margin-top: 150px;
+}
+
+.bar .circle {
+  position: absolute;
+  top: -30px;
+  margin-left: -30px;
+  height: 60px;
+  width: 60px;
+  left: 0;
+  background: #347fc3;
+  border-radius: 30%;
+  -webkit-animation: move 5s infinite;
+}
+
+.bar p {
+  position: absolute;
+  top: -20px;
+  right: -85px;
+  text-transform: uppercase;
+  color: var(--white);
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* Alerts */
+.alert {
+  position: relative;
+  padding: 1.25rem;
+  margin: 50px auto 0 auto;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  text-align: center;
+  max-width: 800px;
+}
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+
+/* Animations */
+@keyframes move {
+  0% {left: 0;}
+  50% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
+  75% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
+  100% {right: 100%;}
+}
+
+@keyframes back {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: -10px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .bar .circle{
+    margin-left: -148px;
+  }
+  .bar p{
+    right: 38px;
+  }
+}
