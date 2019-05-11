@@ -68,4 +68,7 @@
   .theme--dark .header__search__error{
     color: var(--black);
   }
+  .theme--dark .bar p{
+    color: var(--white);
+  }
   
